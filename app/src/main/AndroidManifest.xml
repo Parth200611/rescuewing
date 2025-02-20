@@ -17,10 +17,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".NeedyHomepage"
+            android:name=".NEEDY.NeedyHomepage"
             android:exported="false" />
         <activity
-            android:name=".SaviourHomepage"
+            android:name=".SAVIOUR.SaviourHomepage"
             android:exported="false" />
         <activity
             android:name=".RegisterNow"

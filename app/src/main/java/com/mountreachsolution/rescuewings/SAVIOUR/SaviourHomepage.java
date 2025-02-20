@@ -1,4 +1,4 @@
-package com.mountreachsolution.rescuewings;
+package com.mountreachsolution.rescuewings.SAVIOUR;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.mountreachsolution.rescuewings.R;
 
 public class SaviourHomepage extends AppCompatActivity {
 
