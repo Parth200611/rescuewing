@@ -1,14 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NEEDY.Addrequest">
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rescue Request Help"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="90dp"
+            android:textColor="@color/blue"
+            android:layout_marginBottom="4dp" />
 
-</FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit details for immediate assistance"
+            android:textSize="16sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="16dp" />
+
+
+        <ImageView
+            android:id="@+id/helpImageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_camera_alt_24"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="20sp"
+            />
+
+        <!-- Button to add an image -->
+        <Button
+            android:id="@+id/addImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Image"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp" />
+
+        <!-- Title for Location -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+
+        <!-- EditText for entering Location -->
+        <EditText
+            android:id="@+id/locationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Location"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp" />
+
+        <!-- Title for Details -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+
+        <!-- EditText for entering Details -->
+        <EditText
+            android:id="@+id/detailsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="Enter Details"
+            android:background="@android:drawable/edit_text"
+            android:gravity="top"
+            android:padding="10dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/blue"
+            android:text="Post Help"
+            android:id="@+id/btnPostHelp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="100dp"
+            />
+    </LinearLayout>
+</ScrollView>
