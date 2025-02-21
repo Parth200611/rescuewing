@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
 
     <application
         android:allowBackup="true"
@@ -17,13 +19,19 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".NEEDY.SaftyPre"
+            android:exported="false" />
+        <activity
+            android:name=".NEEDY.Call"
+            android:exported="false" />
+        <activity
             android:name=".NEEDY.NeedyHomepage"
             android:exported="false"
-            android:theme="@style/showactionbar"/>
+            android:theme="@style/showactionbar" />
         <activity
             android:name=".SAVIOUR.SaviourHomepage"
             android:exported="false"
-            android:theme="@style/showactionbar"/>
+            android:theme="@style/showactionbar" />
         <activity
             android:name=".RegisterNow"
             android:exported="false" />

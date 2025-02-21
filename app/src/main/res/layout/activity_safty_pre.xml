@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F7F7F7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Safety Measures Guide"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/blue" />
+
+        <!-- Natural Disasters -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Natural Disasters"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\n• Earthquake:\n  - Drop, Cover, and Hold On.\n  - Stay away from windows and heavy furniture.\n  - Evacuate only when it's safe.\n\n• Flood:\n  - Move to higher ground immediately.\n  - Avoid walking or driving through floodwaters.\n  - Turn off electricity if safe.\n\n• Fire:\n  - Stay low to avoid smoke.\n  - Use a wet cloth to cover your nose and mouth.\n  - Evacuate and call emergency services."/>
+
+        <!-- Medical Emergencies -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medical Emergencies"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\n• Heart Attack:\n  - Call emergency services immediately.\n  - Help the person stay calm and seated.\n\n• Injury:\n  - Apply pressure to stop bleeding.\n  - Immobilize broken bones.\n\n• Stroke:\n  - Act FAST: Face drooping, Arm weakness, Speech difficulty, Time to call emergency."/>
+
+        <!-- Personal Safety -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Safety"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\n• Home Safety:\n  - Lock all doors and windows.\n  - Install smoke detectors.\n\n• Road Safety:\n  - Wear a seatbelt.\n  - Avoid using phones while driving.\n\n• Self-Defense:\n  - Be aware of your surroundings.\n  - Carry emergency contacts."/>
+
+        <!-- Animal Emergencies -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animal Emergencies"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\n• Wild Animal Encounters:\n  - Stay calm, back away slowly.\n  - Do not provoke the animal.\n\n• Animal Bites:\n  - Wash the wound immediately.\n  - Seek medical attention."/>
+
+        <!-- General Precautions -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General Precautions"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="90dp"
+            android:text="\n• Emergency Kit:\n  - Water, food, flashlight, first aid.\n\n• Contact Numbers:\n  - Save emergency contacts on your phone.\n\n• First Aid Steps:\n  - Learn basic CPR and wound care."/>
+    </LinearLayout>
+</ScrollView>

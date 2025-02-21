@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F7F7F7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emergency Assistance"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/blue" />
+
+        <!-- Subheading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quickly reach out for help when needed!"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:textColor="#555555" />
+
+        <!-- Emergency Buttons -->
+        <Button
+            android:id="@+id/btnPolice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Call Police"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnAmbulance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Call Ambulance"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnHospital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Call Hospital"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnAnimalHelper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Call Animal Helper"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnFireBrigade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Call Fire Brigade"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnDisasterManagement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Call Disaster Management"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp" />
+
+    </LinearLayout>
+</ScrollView>

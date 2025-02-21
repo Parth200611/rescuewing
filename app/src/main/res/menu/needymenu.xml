@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nvCall"
+        android:title="Emergency Call"
+        android:icon="@drawable/baseline_call_24"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/nvPre"
+        android:title="safty Measuree"
+        android:icon="@drawable/baseline_safety_check_24"
+        app:showAsAction="always"
+        />
+
+</menu>

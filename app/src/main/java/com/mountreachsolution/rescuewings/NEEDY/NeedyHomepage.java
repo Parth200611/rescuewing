@@ -1,8 +1,11 @@
 package com.mountreachsolution.rescuewings.NEEDY;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowInsetsController;
@@ -61,6 +64,27 @@ public class NeedyHomepage extends AppCompatActivity implements BottomNavigation
             getSupportFragmentManager().beginTransaction().replace(R.id.FrameLayoutuserhome,needyProfil).commit();
 
         }
+        return true;
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.needymenu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId()==R.id.nvCall){
+            Intent i = new Intent(NeedyHomepage.this, Call.class);
+            startActivity(i);
+
+        } else if (item.getItemId() == R.id.nvPre) {
+            Intent i = new Intent(NeedyHomepage.this, SaftyPre.class);
+            startActivity(i);
+
+        }
+
         return true;
     }
 }
