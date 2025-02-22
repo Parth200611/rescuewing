@@ -11,5 +11,6 @@ public class urls {
     public static String getAllRequest=address+"getAllRequest.php";
     public static String AddReqestr=address+"accpetdata.php";
     public static String removeReqest=address+"removerequest.php";
+    public static String getHistory=address+"getHistory.php";
 
 }
