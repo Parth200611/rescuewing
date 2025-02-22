@@ -12,5 +12,6 @@ public class urls {
     public static String AddReqestr=address+"accpetdata.php";
     public static String removeReqest=address+"removerequest.php";
     public static String getHistory=address+"getHistory.php";
+    public static String getResponce=address+"getResponce.php";
 
 }
