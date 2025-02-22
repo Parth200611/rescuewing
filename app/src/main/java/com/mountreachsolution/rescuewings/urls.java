@@ -13,5 +13,7 @@ public class urls {
     public static String removeReqest=address+"removerequest.php";
     public static String getHistory=address+"getHistory.php";
     public static String getResponce=address+"getResponce.php";
+    public static String getAllSv=address+"getSaviour.php";
+    public static String senddata=address+"senddata.php";
 
 }

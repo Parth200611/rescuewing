@@ -1,5 +1,6 @@
 package com.mountreachsolution.rescuewings.SAVIOUR;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -32,9 +33,9 @@ import cz.msebera.android.httpclient.Header;
 public class RequestDetails extends AppCompatActivity {
     ImageView ivImage;
     TextView tvName, tvMobileno, tvLocation, tvDetails,tvUsername;
-    Button btnAccept, btnReject;
-    String id,muUsername;
-    String username,location,details,image,name,mobileno;
+    Button btnAccept, btnReject,btnSend;
+    String id;
+    String username,location,details,image,name,mobileno,muUsername;
     String status1,status2;
 
 
@@ -61,6 +62,7 @@ public class RequestDetails extends AppCompatActivity {
         tvDetails = findViewById(R.id.tvDetails);
         btnAccept = findViewById(R.id.btnAccept);
         btnReject = findViewById(R.id.btnReject);
+        btnSend = findViewById(R.id.btnSend);
 
         tvDetails.setText(details);
         tvLocation.setText(location);
@@ -79,14 +81,41 @@ public class RequestDetails extends AppCompatActivity {
         });  btnReject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                status2 ="Request Accepted";
+                status2 ="Request Rejected";
                 PushDataRe();
+            }
+        });
+        btnSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                saveDataToSharedPreferences(username,location,details,image,name,mobileno,muUsername);
+
             }
         });
 
       getData();
 
     }
+    private void saveDataToSharedPreferences(String username, String location, String details, String image, String name, String mobileno, String muUsername) {
+        SharedPreferences sharedPreferences = getSharedPreferences("senddata", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        // Saving data
+        editor.putString("username", username);
+        editor.putString("location", location);
+        editor.putString("details", details);
+        editor.putString("image", image);
+        editor.putString("name", name);
+        editor.putString("mobileno", mobileno);
+        editor.putString("muUsername", muUsername);
+
+        // Apply changes
+        editor.apply();
+        Toast.makeText(this, "Data Ready to send Another Saviour!", Toast.LENGTH_SHORT).show();
+        removePost(id);
+    }
+
+
 
     private void PushDataRe() {
         AsyncHttpClient client = new AsyncHttpClient();
