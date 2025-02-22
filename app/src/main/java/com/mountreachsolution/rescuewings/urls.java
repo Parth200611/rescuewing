@@ -15,5 +15,7 @@ public class urls {
     public static String getResponce=address+"getResponce.php";
     public static String getAllSv=address+"getSaviour.php";
     public static String senddata=address+"senddata.php";
+    public static String getSend=address+"getSend.php";
+    public static String removedata=address+"removedata.php";
 
 }

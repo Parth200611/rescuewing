@@ -18,6 +18,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".SAVIOUR.AllSend"
+            android:exported="false" />
+        <activity
             android:name=".SAVIOUR.AllRequest"
             android:exported="false" />
         <activity
