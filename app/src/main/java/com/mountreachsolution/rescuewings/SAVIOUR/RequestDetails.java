@@ -35,7 +35,7 @@ public class RequestDetails extends AppCompatActivity {
     Button btnAccept, btnReject;
     String id,muUsername;
     String username,location,details,image,name,mobileno;
-    String status1;
+    String status1,status2;
 
 
     @Override
@@ -76,10 +76,51 @@ public class RequestDetails extends AppCompatActivity {
                 status1 ="Request Accepted";
                 PushData();
             }
+        });  btnReject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                status2 ="Request Accepted";
+                PushDataRe();
+            }
         });
 
       getData();
 
+    }
+
+    private void PushDataRe() {
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams params = new RequestParams();
+        params.put("svusername", muUsername);
+        params.put("location", location);
+        params.put("details", details);
+        params.put("nvusername", username);
+        params.put("name", name);
+        params.put("mobileno", mobileno);
+        params.put("image", image);
+        params.put("status", status2);
+        client.post(urls.AddReqestr,params,new JsonHttpResponseHandler(){
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
+                try {
+                    String status=response.getString("success");
+                    if (status.equals("1")){
+                        Toast.makeText(RequestDetails.this, "Request Rejected", Toast.LENGTH_SHORT).show();
+                        removePost(id);
+                    }else{
+                        Toast.makeText(RequestDetails.this, "Server Error", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                super.onFailure(statusCode, headers, throwable, errorResponse);
+            }
+        });
     }
 
     private void PushData() {
@@ -129,7 +170,6 @@ public class RequestDetails extends AppCompatActivity {
                 try {
                     String status = response.getString("status");
                     if (status.equals("success")) {
-                        Toast.makeText(RequestDetails.this, "Diet Removed!", Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(RequestDetails.this,SaviourHomepage.class);
                         startActivity(i);
                         finish();
