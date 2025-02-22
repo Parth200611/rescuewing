@@ -1,8 +1,11 @@
 package com.mountreachsolution.rescuewings.SAVIOUR;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -18,6 +21,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.mountreachsolution.rescuewings.NEEDY.Call;
+import com.mountreachsolution.rescuewings.NEEDY.NeedyHomepage;
+import com.mountreachsolution.rescuewings.NEEDY.SaftyPre;
 import com.mountreachsolution.rescuewings.R;
 
 public class SaviourHomepage extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -62,6 +68,23 @@ public class SaviourHomepage extends AppCompatActivity implements BottomNavigati
         }else if(item.getItemId()==R.id.svProfil){
             getSupportFragmentManager().beginTransaction().replace(R.id.FrameLayoutuserhome,profilFargment).commit();
         }
+        return true;
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.svmeny,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId()==R.id.svrequest){
+            Intent i = new Intent(SaviourHomepage.this, AllRequest.class);
+            startActivity(i);
+
+        }
+
         return true;
     }
 }
